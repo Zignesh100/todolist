@@ -19,8 +19,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
 // --------- MongoDB Database Connection ------------
-const DB = "mongodb+srv://DI_infotech:DI_-password@cluster0.86cbo.mongodb.net/<DI_database>?retryWrites=true&w=majority";
-
+const DB =  process.env.MONGO_URI
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
